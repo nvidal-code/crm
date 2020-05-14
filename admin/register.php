@@ -2,7 +2,7 @@
     require_once('../include/config.php');
     
     $password = password_hash("root", PASSWORD_DEFAULT);
-    $username = "sieg";
+    $username = "nvidal";
     $email = "test@test.com";
     
     $sql = "INSERT INTO adminuser(username, password, email) VALUES (:username, :password, :email)";

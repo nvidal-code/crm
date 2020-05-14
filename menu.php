@@ -10,7 +10,7 @@
 <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="/index.php">
+            <a class="nav-link" href="./index.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/documentation.php">
+            <a class="nav-link" href="./documentation.php">
               <i class="material-icons">note</i>
               <p>Documentation</p>
             </a>

@@ -40,7 +40,6 @@
                             <h4 class="card-title">Créer une documentation</h4>
                         </div>
                         <div class="card-body">
-                           
                                 <!--Choix de la catégorie-->
                                 <label for="category-select">Choisir une categorie :</label>
                                 <div id="btnAddCategory" style="display:block">
@@ -70,7 +69,7 @@
                                 <!--Ajout du contenu de l'article-->
                                 <div class="row">
                                     <div class="col-md-12">
-                                       <div id="editorjs"></div>
+                                        <div id="editorjs"></div>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary pull-right" id="publish">Publier</button>
@@ -80,8 +79,7 @@
             </div>
         </div>
     </div>
- 
-    <!-- Fin contenu de la page -->
+    <!-- Fin contenus de la page -->
     <footer class="footer">
         <?php include("../footer.php"); ?>
     </footer>

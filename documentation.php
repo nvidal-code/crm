@@ -52,7 +52,7 @@
 					<div class="card-body">
 						<div class="card-body-doc">
 							<?php 
-      			               require_once('./include/config.php');
+      			            	require_once('include/config.php');
 					           $reponse = $dbh->query('SELECT * FROM documentation');// On récupère tout le contenu de la table post
   					           while ($donnees = $reponse->fetch())// On affiche chaque entrée une à une
                                {

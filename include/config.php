@@ -1,7 +1,7 @@
 <?php
 $dbh;
 try {
-    $dbh = new PDO('mysql:host=defourscikcrm.mysql.db;dbname=defourscikcrm', "defourscikcrm", "Defours73");
+    $dbh = new PDO('mysql:host=localhost:3308.mysql.db;dbname=crm', "root", "");
   
     //$dbh = null;
 } catch (PDOException $e) {

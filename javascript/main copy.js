@@ -11,7 +11,6 @@ $('#addCategory').on('click', function() {
 
 const editor = new EditorJS({
     placeholder: 'Let`s write an awesome story!',
-    holderId: 'editorjs',
     tools: {
         header: Header,
     },
@@ -29,36 +28,14 @@ editor.isReady
 // Bouton pour récupérer le contenu de l'editeur
 $('#publish').on('click', function() { // fontion pour récupérer le contenu de l'editeur
     var titre = document.getElementById("titre").value;
-    var newPost = "";
+    var outputData = "";
 
     editor.save().then((outputData) => {
-        var postContent = Object.values(outputData); // On tansforme l'objet en array afin de traiter le contenu
-        console.dir(postContent);
-
-        // Boucle pour parcourir le tableau et récupérer les differents texte de l'array postContent
-        for (i = 0; i < postContent.length; i++) {
-            newPost += postContent[1][i].data.text;
-            newPost += "\n";
-            console.dir(newPost);
-        }
-        // Envoie des valeurs au serveur
-        $.ajax({
-            method: "POST",
-            url: "../admin/ajout_doc.php",
-            data: {
-                'post': newPost,
-                'titre': titre,
-                success: function(result) {
-                    console.log("log ajax : ", newPost);
-                }
-            },
-        });
-
+        console.log('Article data: ', outputData)
     }).catch((error) => {
         console.log('Saving failed: ', error)
     });
 });
-
 
 // Fonction pour cacher l'ajout d'une categorie
 function addCategory() {

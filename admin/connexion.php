@@ -3,7 +3,6 @@
     session_start();
     
     if (isset($_POST["username"]) && isset($_POST["password"])) {
-       
         $username = $_POST["username"];
         echo '1er if username : ' . $username . '<br />';
         $password = $_POST["password"];
@@ -22,7 +21,7 @@
             $_SESSION['id'] = $result[1];
             header('Location: ./admin.php');
         }
-         else {
+        else {
             echo 'Mauvais pass';
         }       
     }
