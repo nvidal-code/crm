@@ -31,7 +31,7 @@
 						<div class="card card-stats">
 							<div class="card-header card-header-info card-header-icon">
 								<div class="card-icon">
-									<a class="white-link" href="admin/creat_documentation.php">
+									<a class="white-link" href="/admin/creat_documentation.php">
 										<i class="material-icons white-link">library_add</i>
 									</a>
 								</div>

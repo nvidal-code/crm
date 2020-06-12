@@ -19,4 +19,20 @@ require_once('../include/config.php');
         $stmt->execute();
         return;
     }
+
+// $client = new clientClass([
+//     'client' => 'Rivoli',
+//     'nomContact' => 'Vidal',
+//     'adresse' => "10 rue victor hugo",
+//     'codePostal' => "73540",
+//     'ville' => "la bathie",
+//     'telephone' => "04 79 1 39 67",
+//     'mail' => "nicolas.vidal@defours.com",
+//     'description' => "Rien à voir ici"
+// ]);
+
+// $manager = new ClientClass();
+
+// $manager->add($client);
+
     ?>

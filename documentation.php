@@ -55,7 +55,7 @@
       			            require_once('include/config.php');
 							   $reponse = $dbh->query('SELECT * FROM documentation');// On récupère tout le contenu de la table post
 							 
-							  $donnees = $reponse->fetchAll();// On affiche chaque entrée une à une
+							   $donnees = $reponse->fetchAll();// On affiche chaque entrée une à une
                              
 				            ?>
 							<div class="card-header card-header-primary card">

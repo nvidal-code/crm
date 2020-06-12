@@ -10,14 +10,14 @@
 <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="index.php">
+            <a class="nav-link" href="/index.php">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <!-- Ajout de page au menu -->
           <li class="nav-item">
-            <a class="nav-link" href="clients/listing.php">
+            <a class="nav-link" href="/clients/listing.php">
               <i class="material-icons">person</i>
               <p>Clients</p>
             </a>
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="documentation/main.php">
+            <a class="nav-link" href="/documentation/main.php">
               <i class="material-icons">note</i>
               <p>Documentation</p>
             </a>

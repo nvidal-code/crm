@@ -9,9 +9,10 @@ $('#ajout_client').on('click', function() {
     var mail = document.getElementById("mail").value;
     var description = document.getElementById("description").value;
 
+
     $.ajax({
         method: "POST",
-        url: "../clients/ajout-client-bdd.php",
+        url: "../clients/ClientManager.php",
         data: {
             'client': client,
             'nomContact': nomContact,
