@@ -104,25 +104,6 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary pull-right" id='ajout_client'>Ajouter</button>
-                                    <?php
-                                    $client = new clientClass([
-                                        'client' => 'Rivoli',
-                                        'nomContact' => 'Vidal',
-                                        'adresse' => '10 rue victor hugo',
-                                        'codePostal' => '73540',
-                                        'ville' => 'la bathie',
-                                        'telephone' => '04 79 1 39 67',
-                                        'mail' => 'nicolas.vidal@defours.com',
-                                        'description' => 'Rien à voir ici'
-                                    ]);
-
-                                    $manager = new clientManager($dbh);
-
-                                    $manager->add($client);
-                                    var_dump($dbh);
-                                    var_dump($client);
-
-                                    ?>
                                     <div class="clearfix"></div>
 
                                 </div>

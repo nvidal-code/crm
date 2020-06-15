@@ -12,7 +12,7 @@ $('#ajout_client').on('click', function() {
 
     $.ajax({
         method: "POST",
-        url: "../clients/ClientManager.php",
+        url: "../clients/ajout-client-bdd.php",
         data: {
             'client': client,
             'nomContact': nomContact,
