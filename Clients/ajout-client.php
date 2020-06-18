@@ -45,71 +45,70 @@
                                     <h4 class="card-title">Ajouter un client</h4>
                                 </div>
                                 <div class="card-body">
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="text" class="form-control" id="client" placeholder="Client">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="text" class="form-control" id="nom_contact" placeholder="Nom du Contact">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="text" class="form-control" id="adresse" placeholder="Adresse">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="text" class="form-control" id="code_postal" placeholder="Code postal">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="text" class="form-control" id="ville" placeholder="Ville">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="tel" class="form-control" id="telephone" placeholder="N° de téléphone">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group bmd-form-group">
-                                                <label class="bmd-label-floating"></label>
-                                                <input type="tel" class="form-control" id="mail" placeholder="E-mail">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Description</label>
+                                    <form action="ajout-client-bdd.php" method="post">
+                                        <div class="row">
+                                            <div class="col-md-6">
                                                 <div class="form-group bmd-form-group">
                                                     <label class="bmd-label-floating"></label>
-                                                    <textarea class="form-control" rows="5" id="description" placeholder="Informations complémentaires."></textarea>
+                                                    <input type="text" class="form-control" name="client" placeholder="Client">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="text" class="form-control" name="nomContact" placeholder="Nom du Contact">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="text" class="form-control" name="adresse" placeholder="Adresse">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="text" class="form-control" name="codePostal" placeholder="Code postal">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="text" class="form-control" name="ville" placeholder="Ville">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary pull-right" id='ajout_client'>Ajouter</button>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="tel" class="form-control" name="telephone" placeholder="N° de téléphone">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="tel" class="form-control" name="mail" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Description</label>
+                                                    <div class="form-group bmd-form-group">
+                                                        <label class="bmd-label-floating"></label>
+                                                        <textarea class="form-control" rows="5" name="description" placeholder="Informations complémentaires."></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary pull-right" id='ajout_client'>Ajouter</button>
+                                    </form>
                                     <div class="clearfix"></div>
-
                                 </div>
                             </div>
                         </div>
-
                         <!-- Fin contenu de la page -->
                     </div>
                 </div>

@@ -33,5 +33,7 @@ require_once("clientClass.php");
     var_dump($dbh);
     var_dump($newClient);
 
+    header('Location: ajout-client.php');
+
     
     ?>

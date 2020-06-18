@@ -21,7 +21,7 @@ class clientManager
       $stmt->bindValue(':telephone', $client->telephone());
       $stmt->bindValue(':mail', $client->mail());
       $stmt->bindValue(':description', $client->description());
-    $stmt->execute();
+      $stmt->execute();
   }
 
   public function delete(clientClass $client)
@@ -36,7 +36,6 @@ class clientManager
     $id = (int) $id;
     $stmt = $this->dbh->query('SELECT id, nomContact, adresse, codePostal, ville, telephone, mail, description  FROM clients WHERE id = '.$id);
     $donnees = $stmt->fetch(PDO::FETCH_ASSOC);
-
     return new clientClass($donnees);
   }
 
