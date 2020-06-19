@@ -50,7 +50,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group bmd-form-group">
                                                     <label class="bmd-label-floating"></label>
-                                                    <input type="text" class="form-control" name="client" placeholder="Client">
+                                                    <input type="text" class="form-control" name="enseigne" placeholder="Enseigne">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group bmd-form-group">
+                                                    <label class="bmd-label-floating"></label>
+                                                    <input type="text" class="form-control" name="compte" placeholder="Compte">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

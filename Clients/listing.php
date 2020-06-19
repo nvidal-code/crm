@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> <!-- https://material.io/resources/icons/?icon=devices_other&style=baseline -->
     <!-- Material Kit CSS -->
-    <link href="../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
-    <link href="../css/main.css" rel="stylesheet" />
+    <link href="/../css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+    <link href="/../css/main.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -49,22 +49,39 @@
                         <div class="card-header card-header-primary">
                             <h4 class="card-title">Base de donnée client</h4>
                         </div>
-                        <div class="card-body">                          
+                        <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <th>ID Client</th>
+                                    <th>Enseigne</th>
+                                    <th>Ville</th>
+                                    <th>Responsable</th>
+                                    <th>Numero de téléphone</th>
+                                    <th>Logiciel</th>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    require_once('../include/config.php');
+                                    $reponse = $dbh->query('SELECT * FROM clients'); // On récupère tout le contenu de la table post
+                                    while ($donnees = $reponse->fetch()) {       
+                                        echo ('<tr>');                
+                                        echo ('<td><a href="/clients/fiche-client.php/?id=' . $donnees['id'] . '">'. $donnees['id'] . '</a></td>');
+                                        echo ('<td><a href="/clients/fiche-client.php/?id=' . $donnees['id'] . '">'. $donnees['enseigne'] . '</a></td>');                                       
+                                        echo ('<td>'. $donnees['ville'] . '</td>');
+                                        echo ('<td>'. $donnees['nomContact'] . '</td>');
+                                        echo ('<td>'. $donnees['telephone'] . '</td>');
+                                        echo ('</tr>');
+                                    } 
+                                    $reponse->closeCursor(); // Termine le traitement de la requête
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>                       
                                 <!-- Section listing clients -->
-                                <?php
-                                require_once('../include/config.php');
-                                $reponse = $dbh->query('SELECT * FROM clients'); // On récupère tout le contenu de la table post
-                                while ($donnees = $reponse->fetch()) {
-                                    echo ('<div class="card d-connect">');
-                                    echo ('<div class="card-header card-header-primary">');
-                                    echo ('<h4 class="card-title">' . $donnees['client'] . '</h4>');
-                                    echo ('</div>');
-                                    echo ('<div class="card-body">' . $donnees['nomContact'] . '</div>');
-                                    echo ('</div>');
-                                } 
-                                $reponse->closeCursor(); // Termine le traitement de la requête
-                                ?>
-                                    <!-- Fin listing clients -->                       
+                                
+                                    <!-- Fin listing clients -->       
+                                                    
                         </div>
                     </div>
                     <!-- Fin contenu de la page -->

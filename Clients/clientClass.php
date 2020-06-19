@@ -2,7 +2,8 @@
 class clientClass {
 
     public $id;
-    public $client;
+    public $enseigne;
+    public $compte;
     public $nomContact;
     public $adresse;
     public $codePostal;
@@ -45,9 +46,14 @@ public function id()
     return $this->id;
 }
 
-public function client()
+public function enseigne()
 {
-    return $this->client;
+    return $this->enseigne;
+}
+
+public function compte()
+{
+    return $this->compte;
 }
 
 public function nomContact()
@@ -99,10 +105,17 @@ public function setId($id){
   }
 }
 
-public function setClient($client){
+public function setEnseigne($enseigne){
+    // On vérifie qu'il s'agit bien d'une chaîne de caractères.
+    if (is_string($enseigne)) {
+      $this->enseigne = $enseigne;
+    }
+  }
+
+public function setCompte($compte){
   // On vérifie qu'il s'agit bien d'une chaîne de caractères.
-  if (is_string($client)) {
-    $this->client = $client;
+  if (is_string($compte)) {
+    $this->compte = $compte;
   }
 }
 
